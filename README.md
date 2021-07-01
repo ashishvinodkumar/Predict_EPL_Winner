@@ -18,13 +18,17 @@ For the out-of-sample prediction, the report details predicting the winner of th
 # Exploratory Data Analysis (EDA)
 The most notable EDA was the interaction between ChanceCreationCrossing and buildUpPlayPassing. ChanceCreationCrossing determines the number of times in the entire season that a given team creates a goal scoring chance by crossing the ball into their opponent’s half. BuildUpPlayPassing signifies the style of play leading up to a chance, ranging from long diagonal passes, mixed balls (combination of long and short passes), and short passes.
 
-![interaction_epl](https://user-images.githubusercontent.com/26104722/124060453-15299f00-d9fb-11eb-959c-5c1370774ad1.png)
+![interaction_epl](https://user-images.githubusercontent.com/26104722/124060689-8e28f680-d9fb-11eb-9477-8fcaff76bccd.png)
 
 As you can see in the above plot, for both long and mixed BuildUpPlayPassing levels, as the ChanceCreationCrossing increases, the overall win percentage also increases. However, when BuildUpPlayPassing is Short, and as the ChanceCreationCrossing increases, the overall win percentage decreases. I took note of this interesting interaction, to further analyze if this trend is statistically significant in the Model Selection section.
 
-# Model
-![epl_model](https://user-images.githubusercontent.com/26104722/124060187-8157d300-d9fa-11eb-9105-a8a4e5f08c9a.png)
+# Model Selection
+For a detailed model selection and explanation, please refer to the pdf report.
+<img width="1422" alt="epl_model" src="https://user-images.githubusercontent.com/26104722/124060688-8e28f680-d9fb-11eb-8fe8-0ace9f9ab563.png">
+
 
 # Conclusion
+Using the hierarchical linear regression model, this report tried to explore and identify the key predictors that influence the overall win percentage for a team. The analysis identified BuildUpPlayPassing, DefencePressure, DefenceAggression, ChanceCreationPassing, and the interaction between DefenceAggressionClass and ChanceCreationPassing as significant predictors that influence a team’s ability to win the premier league season. I also sought to perform an out of sample prediction with predicting the winner of the 2015-2016 season. My model predicted Arsenal to have the highest overall win percentage, and given the unpredictability of the 2015-2016 season and Leicester City’s meteoric rise, the model predicted reasonably well by selecting Arsenal, the next best team as champions for the 2015-2016 season. However, I would argue that there are limitations to the model. Firstly, only 6 years of data ranging from 2009-2015 is not sufficient to make reliable predictions. Also, by retaining teams that only appear at least 4 times in the dataset, it eliminates teams like Leicester City. Also, it would be beneficial to include season-wide player ratings as certain ‘star’ players would consistently have a higher rating, thus positively impacting the team’s overall performance. In all, there was insufficient data to further improve the model. To conclude, this analysis only serves as a preliminary insight and there remains room for improvement.
+
 
 
