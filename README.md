@@ -1,6 +1,6 @@
 # Predict English Premier League (EPL) Winner
 
-Full Report: https://github.com/ashishvinodkumar/Predict_EPL_Winner/blob/main/20_Report/IDS-702-Final-Project-Report.pdf
+[Report](https://github.com/ashishvinodkumar/Predict_EPL_Winner/blob/main/20_Report/IDS-702-Final-Project-Report.pdf)
 
 # Goal
 The goal of this project is to predict who is going to win the 2015-2016 english premier league season, along with identifying key features that influence a team’s ability to win the league. The report details building a hierarchical linear regression model, to account for all necessary predictors and any potential interactions that would improve the prediction ability of the model. The main takeaway from this report will be to assess the key features, and prediction accuracy of the model.
