@@ -18,13 +18,23 @@ For the out-of-sample prediction, the report details predicting the winner of th
 # Exploratory Data Analysis (EDA)
 The most notable EDA was the interaction between ChanceCreationCrossing and buildUpPlayPassing. ChanceCreationCrossing determines the number of times in the entire season that a given team creates a goal scoring chance by crossing the ball into their opponent’s half. BuildUpPlayPassing signifies the style of play leading up to a chance, ranging from long diagonal passes, mixed balls (combination of long and short passes), and short passes.
 
-![interaction_epl](https://user-images.githubusercontent.com/26104722/124060689-8e28f680-d9fb-11eb-9477-8fcaff76bccd.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/26104722/124060689-8e28f680-d9fb-11eb-9477-8fcaff76bccd.png" width="460" height="460">
+</p>
 
 As you can see in the above plot, for both long and mixed BuildUpPlayPassing levels, as the ChanceCreationCrossing increases, the overall win percentage also increases. However, when BuildUpPlayPassing is Short, and as the ChanceCreationCrossing increases, the overall win percentage decreases. I took note of this interesting interaction, to further analyze if this trend is statistically significant in the Model Selection section.
 
 # Model Selection
-For a detailed model selection and explanation, please refer to the pdf report.
+
+<p align="center">
 <img width="1422" alt="epl_model" src="https://user-images.githubusercontent.com/26104722/124060688-8e28f680-d9fb-11eb-8fe8-0ace9f9ab563.png">
+</p>
+
+My analysis sought to identify the key features that influence the overall win percentage for a team during an entire season of EPL. It is observed that BuildUpPlayPassing, DefencePressure, DefenceAggression, ChanceCreationPassing, and the interaction between DefenceAggressionClass and ChanceCreationPassing are all significant. One interesting observation is that surprisingly BuildUpPlaySpeed, BuildUpPlayDribbling, and ChanceCreationShooting are not significant. Based on my understanding of the game, I initially thought that the speed with which a team moves from defence to attack, how well they are able to dribble the ball, and how many shooting chances they create will influence the team’s overall ability to win the EPL season. However, I was amazed to find out that quality of play detailed by the build up play passing between long, short and mixed passes, how well the team is able to press and showcase aggression when they lose the ball to win it back, and creation of goal scoring chances via passes, have a much higher influence on the game and entire season.
+
+As a result, when the BuildUpPlayPassing is Mixed, the overall win percentage increases by 17.35%. Similarly when BuildUpPlayPassing is Short, the overall win percentage increases by 41.90%. When the BuildUpPlayPositioning is Organized, the overall win percentage increases by 13.88%. As noted above, when the DefensePressureClass is Medium, the overall win percentage decreases by 10.42%. 
+
+I further performed an in-sample prediction to validate the accuracy of the model between the actual winners between the 2009-2015 seasons, and the predicted winners based on my model. The model predicted the EPL season winner accurately for 2010/2011, 2012/2013, and 2013/2014. Therefore, it had a 50% accuracy for in-sample prediction. 
 
 
 # Conclusion
