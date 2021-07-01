@@ -15,10 +15,15 @@ English Premier League is the top soccer league in England which is contested by
 For the out-of-sample prediction, the report details predicting the winner of the 2015-2016 EPL season and comparing the result against the expected/actual winner.
 
 
-# Project Design
+# Exploratory Data Analysis (EDA)
+The most notable EDA was the interaction between ChanceCreationCrossing and buildUpPlayPassing. ChanceCreationCrossing determines the number of times in the entire season that a given team creates a goal scoring chance by crossing the ball into their opponent’s half. BuildUpPlayPassing signifies the style of play leading up to a chance, ranging from long diagonal passes, mixed balls (combination of long and short passes), and short passes.
 
+![interaction_epl](https://user-images.githubusercontent.com/26104722/124060453-15299f00-d9fb-11eb-959c-5c1370774ad1.png)
 
-# Model Results
+As you can see in the above plot, for both long and mixed BuildUpPlayPassing levels, as the ChanceCreationCrossing increases, the overall win percentage also increases. However, when BuildUpPlayPassing is Short, and as the ChanceCreationCrossing increases, the overall win percentage decreases. I took note of this interesting interaction, to further analyze if this trend is statistically significant in the Model Selection section.
+
+# Model
+![epl_model](https://user-images.githubusercontent.com/26104722/124060187-8157d300-d9fa-11eb-9105-a8a4e5f08c9a.png)
 
 # Conclusion
 
